@@ -1,0 +1,87 @@
+* 学习emacs
+** 基础操作
+-- C-f 为前移一个字符，f代表forward。
+-- C-b 为后移一个字符，b代表backward。
+-- C-p 为上移至前一行，p代表previous。
+-- C-n 为上移至下一行，n代表next。
+-- C-a 为移至行首，a代表ahead。
+-- C-e 为移至行尾，e代表end。
+
+** 高级自定义
+use C-c ' to open anther buffer to edit source code.
+<s table auto show BEG...
+#+BEGIN_SRC emacs-lisp
+  ;;设置org文件代码部分语法高亮
+  (require 'org)
+  (set org-src-fontify-natively t)
+#+END_SRC
+开启全屏
+#+BEGIN_SRC emacs-lisp
+  (setq initial-frame-alist (quote ((fullscren . maximized))))
+#+END_SRC
+配置插件源
+#+BEGIN_SRC emacs-lisp
+(when (>= emacs-major-version 24)
+    (require 'package)
+    (package-initialize)
+    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
+
+;; cl - Common Lisp Extension
+(require 'cl)
+
+;; Add Packages
+(defvar my/packages '(
+	       ;; --- Auto-completion ---
+	       company
+	       ;; --- Better Editor ---
+	       hungry-delete
+	       swiper
+	       counsel
+	       smartparens
+	       ;; --- Major Mode ---
+	       js2-mode
+	       ;; --- Minor Mode ---
+	       nodejs-repl
+	       exec-path-from-shell
+	       ;; --- Themes ---
+	       monokai-theme
+	       ;; solarized-theme
+	       ) "Default packages")
+
+(setq package-selected-packages my/packages)
+
+(defun my/packages-installed-p ()
+    (loop for pkg in my/packages
+	  when (not (package-installed-p pkg)) do (return nil)
+	  finally (return t)))
+
+(unless (my/packages-installed-p)
+    (message "%s" "Refreshing package database...")
+    (package-refresh-contents)
+    (dolist (pkg my/packages)
+      (when (not (package-installed-p pkg))
+	(package-install pkg))))
+
+;; Find Executable Path on OS X
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+#+END_SRC
+
+配置package
+M-x customize-group
+
+** Org-mode 进阶
+Agenda 的使用
+C-c C-s 选择想要完成的时间
+C-c C-d 选择想要结束的时间
+C-c a 可以打开 Agenda 模式菜单并选择不同的可视方式（ r ）
+#+BEGIN_SRC emacs-lisp
+;; 设置默认 Org Agenda 文件目录
+(setq org-agenda-files '("~/org"))
+
+;; 设置 org-agenda 打开快捷键
+(global-set-key (kbd "C-c a") 'org-agenda)
+#+END_SRC
+
+** learn emacs DEADLINE: <2016-11-27 周日> SCHEDULED: <2016-11-26 周六 00:00>
+   
