@@ -96,6 +96,7 @@
 
 ;;disable file backup
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 (defun open-my-init-file()
   (interactive)
