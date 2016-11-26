@@ -122,6 +122,9 @@
 ;; 设置 org-agenda 打开快捷键
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;;自动加载外部修改的文件
+(global-auto-revert-mode t)
+
 
 ;;启动全屏
 (setq initial-frame-alist (quote ((fullscren . maximized))))
