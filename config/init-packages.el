@@ -61,6 +61,11 @@
 (require 'popwin)
 (popwin-mode t)
 
+
+;;自动提示
+(global-company-mode 1)
+
+
 ;;config  mode-line
 (setq auto-mode-alist
       (append
