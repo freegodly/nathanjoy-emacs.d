@@ -1,48 +1,6 @@
-(when (>= emacs-major-version 24)
-    (require 'package)
-    (package-initialize)
-    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
+(add-to-list 'load-path "~/.emacs.d/config" )
 
-;; cl - Common Lisp Extension
-(require 'cl)
-
-;; Add Packages
-(defvar my/packages '(
-	       ;; --- Auto-completion ---
-	       company
-	       ;; --- Better Editor ---
-	       hungry-delete
-	       swiper
-	       counsel
-	       smartparens
-	       ;; --- Major Mode ---
-	       js2-mode
-	       ;; --- Minor Mode ---
-	       nodejs-repl
-	       
-	       ;; --- Themes ---
-	       monokai-theme
-	       solarized-theme
-
-	       ) "Default packages")
-
-(setq package-selected-packages my/packages)
-
-(defun my/packages-installed-p ()
-    (loop for pkg in my/packages
-	  when (not (package-installed-p pkg)) do (return nil)
-	  finally (return t)))
-
-(unless (my/packages-installed-p)
-    (message "%s" "Refreshing package database...")
-    (package-refresh-contents)
-    (dolist (pkg my/packages)
-      (when (not (package-installed-p pkg))
-	(package-install pkg))))
-
-(require 'hungry-delete)
-(global-hungry-delete-mode)
- 
+(require 'init-packages)
 
 ;;设置主题
 ;(add-to-list my/packages 'monokai-theme)
@@ -51,9 +9,7 @@
 
 
 
-;;swiper
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
+
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
@@ -72,20 +28,12 @@
 (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
 
 
-;;smartparens-global-mode
-(require 'smartparens-config)
-
-;; Always start smartparens mode in js-mode.
-;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-(smartparens-global-mode t)
 
 
 
-;;config  mode-line
-(setq auto-mode-alist
-      (append
-       '(("\\.js\\'" . js2-mode))
-       auto-mode-alist))
+
+
+
 
 
 (tool-bar-mode -1)
@@ -142,5 +90,14 @@
 ;;自动提示
 (global-company-mode 1)
 
- 
+;;关闭bell
+(setq ring-bell-function 'ignore) 
+
+;;快捷缩写
+(abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ("8zl" "haaaaaaaaaa")
+					    ("xxx" "################")
+					    ))
+
 
