@@ -1,10 +1,9 @@
 ;;; solarized-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (solarized-color-blend) "solarized" "solarized.el"
-;;;;;;  (22585 39405 0 0))
+;;;### (autoloads nil "solarized" "solarized.el" (22586 57733 0 0))
 ;;; Generated autoloads from solarized.el
 
 (autoload 'solarized-color-blend "solarized" "\
@@ -23,15 +22,13 @@ Alpha should be a float between 0 and 1.
 
 ;;;### (autoloads nil nil ("solarized-dark-theme.el" "solarized-light-theme.el"
 ;;;;;;  "solarized-theme-pkg.el" "solarized-theme-utils.el" "solarized-theme.el")
-;;;;;;  (22585 39406 47000 0))
+;;;;;;  (22586 57734 118000 0))
 
 ;;;***
 
-(provide 'solarized-theme-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; solarized-theme-autoloads.el ends here

@@ -1,4 +1,11 @@
 
+(set-default-font "12")
+
+
+;;设置tab缩进格式
+;;etq indent-tabs-mode nil)
+(setq tab-width 4)
+
 ;;关闭bell
 (setq ring-bell-function 'ignore) 
 
@@ -6,7 +13,20 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;;显示列号
+(setq column-number-mode t)
 
+;;尽快显示按键序列
+(setq echo-keystrokes 0.1)
+
+;;语法高亮
+(global-font-lock-mode t)
+
+;;在状态栏显示当前光标在那个函数
+(which-function-mode t)
+
+;;不自动添加换行到文件末尾
+(setq require-final-newline nil)
 
 ;; 设置 org-agenda 打开快捷键
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -40,4 +60,10 @@
 					    ("xxx" "################")
 					    ))
 
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(setq default-directory "~/.emacs.d/" )
+
 (provide 'init-better-defaults)
+
+

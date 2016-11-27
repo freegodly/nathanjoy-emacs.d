@@ -1,10 +1,10 @@
 ;;; js2-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (js2-imenu-extras-mode js2-imenu-extras-setup)
-;;;;;;  "js2-imenu-extras" "js2-imenu-extras.el" (22585 37633 0 0))
+;;;### (autoloads nil "js2-imenu-extras" "js2-imenu-extras.el" (22586
+;;;;;;  57726 0 0))
 ;;; Generated autoloads from js2-imenu-extras.el
 
 (autoload 'js2-imenu-extras-setup "js2-imenu-extras" "\
@@ -19,8 +19,7 @@ Toggle Imenu support for frameworks and structural patterns.
 
 ;;;***
 
-;;;### (autoloads (js2-jsx-mode js2-mode js2-minor-mode js2-highlight-unused-variables-mode)
-;;;;;;  "js2-mode" "js2-mode.el" (22585 37634 0 0))
+;;;### (autoloads nil "js2-mode" "js2-mode.el" (22586 57726 0 0))
 ;;; Generated autoloads from js2-mode.el
 
 (autoload 'js2-highlight-unused-variables-mode "js2-mode" "\
@@ -56,15 +55,13 @@ variables (`sgml-basic-offset' et al) locally, like so:
 ;;;***
 
 ;;;### (autoloads nil nil ("js2-mode-pkg.el" "js2-old-indent.el")
-;;;;;;  (22585 37634 97000 0))
+;;;;;;  (22586 57726 777000 0))
 
 ;;;***
 
-(provide 'js2-mode-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; js2-mode-autoloads.el ends here

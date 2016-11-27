@@ -1,10 +1,9 @@
 ;;; swiper-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (swiper swiper-avy) "swiper" "swiper.el" (22585
-;;;;;;  37539 0 0))
+;;;### (autoloads nil "swiper" "swiper.el" (22586 57715 0 0))
 ;;; Generated autoloads from swiper.el
 
 (autoload 'swiper-avy "swiper" "\
@@ -20,15 +19,9 @@ When non-nil, INITIAL-INPUT is the initial search pattern.
 
 ;;;***
 
-;;;### (autoloads nil nil ("swiper-pkg.el") (22585 37539 512000 0))
-
-;;;***
-
-(provide 'swiper-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; swiper-autoloads.el ends here
