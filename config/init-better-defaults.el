@@ -1,5 +1,5 @@
 
-(set-default-font "12")
+
 
 
 ;;设置tab缩进格式

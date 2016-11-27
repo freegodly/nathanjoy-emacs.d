@@ -49,4 +49,12 @@
 (global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region) 
 
 
+;;格式化代码
+(defun indent-buffer ()
+  "Indent the whole buffer."
+  (interactive)
+  (save-excursion
+    (indent-region (point-min) (point-max) nil)))
+(global-set-key [f3] 'indent-buffer)
+
 (provide 'init-keybindings)
