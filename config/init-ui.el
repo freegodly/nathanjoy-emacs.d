@@ -1,4 +1,4 @@
-;;ÉèÖÃÖ÷Ìâ
+;;Ã‰Ã¨Ã–ÃƒÃ–Ã·ÃŒÃ¢
 ;(add-to-list my/packages 'monokai-theme)
 (load-theme 'monokai t)
 ;;(load-theme 'solarized t)
@@ -6,12 +6,16 @@
 (set-default-font "12")
 
 
+;;è®¾ç½®çª—å£ä½ç½®ä¸ºå±åº“å·¦ä¸Šè§’(0,0)
+(set-frame-position (selected-frame) 100 40)
+;;è®¾ç½®emacså¯åŠ¨çª—å£å¤§å°
+(set-frame-width (selected-frame) 100)
+(set-frame-height (selected-frame) 43)
 
- ;;ÉèÖÃ´°¿ÚÎ»ÖÃÎªÆÁ¿â×óÉÏ½Ç(0,0)
-  (set-frame-position (selected-frame) 40 30)
-  ;;ÉèÖÃ¿íºÍ¸ß
-  (set-frame-width (selected-frame) 120)
-  (set-frame-height (selected-frame) 45)
+;; æŒ‡é’ˆé¢œè‰²è®¾ç½®ä¸ºç™½è‰²
+(set-cursor-color "white")
+;; é¼ æ ‡é¢œè‰²è®¾ç½®ä¸ºç™½è‰²
+(set-mouse-color "white")
 
 
 (tool-bar-mode -1)
@@ -21,14 +25,25 @@
 (setq inhibit-splash-screen t)
 (setq-default cursor-type 'bar)
 
-;;Æô¶¯È«ÆÁ
+;;Ã†Ã´Â¶Â¯ÃˆÂ«Ã†Ã
 (setq initial-frame-alist (quote ((fullscren . maximized))))
 
-;;¿ªÆôÀ¨ºÅ¸ßÁÁÆ¥Åä
+;;Â¿ÂªÃ†Ã´Ã€Â¨ÂºÃ…Â¸ÃŸÃÃÃ†Â¥Ã…Ã¤
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
-;;µ±Ç°ĞĞ¸ßÁÁ
-(global-hl-line-mode t) 
+;;ÂµÂ±Ã‡Â°ÃÃÂ¸ÃŸÃÃ
+; (global-hl-line-mode t) 
+
+
+;; æ˜¾ç¤ºæ—¶é—´ï¼Œæ ¼å¼å¦‚ä¸‹
+(display-time-mode 1) 
+(setq display-time-24hr-format t) 
+(setq display-time-day-and-date t) 
+
+
+;; no menu bar
+(if (fboundp 'menu-bar-mode)
+  (menu-bar-mode -1))
 
 
 (provide 'init-ui)

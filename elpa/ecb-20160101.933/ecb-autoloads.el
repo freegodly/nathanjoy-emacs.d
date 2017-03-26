@@ -1,9 +1,9 @@
 ;;; ecb-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ecb" "ecb.el" (22586 57824 0 0))
+;;;### (autoloads nil "ecb" "ecb.el" (22743 35475 0 0))
 ;;; Generated autoloads from ecb.el
 
 (autoload 'ecb-activate "ecb" "\
@@ -33,7 +33,7 @@ exist.
 
 ;;;***
 
-;;;### (autoloads nil "ecb-help" "ecb-help.el" (22586 57824 0 0))
+;;;### (autoloads nil "ecb-help" "ecb-help.el" (22743 35475 0 0))
 ;;; Generated autoloads from ecb-help.el
 
 (autoload 'ecb-show-help "ecb-help" "\
@@ -52,7 +52,7 @@ HTML-online-documentation is not included.
 
 ;;;***
 
-;;;### (autoloads nil "ecb-util" "ecb-util.el" (22586 57824 0 0))
+;;;### (autoloads nil "ecb-util" "ecb-util.el" (22743 35476 0 0))
 ;;; Generated autoloads from ecb-util.el
 
 (defconst ecb-running-xemacs (featurep 'xemacs))
@@ -68,7 +68,7 @@ HTML-online-documentation is not included.
 ;;;;;;  "ecb-multiframe.el" "ecb-navigate.el" "ecb-pkg.el" "ecb-semantic-wrapper.el"
 ;;;;;;  "ecb-semantic.el" "ecb-speedbar.el" "ecb-symboldef.el" "ecb-tod.el"
 ;;;;;;  "ecb-upgrade.el" "ecb-winman-support.el" "silentcomp.el"
-;;;;;;  "tree-buffer.el") (22586 57825 553000 0))
+;;;;;;  "tree-buffer.el") (22743 35476 0 0))
 
 ;;;***
 
