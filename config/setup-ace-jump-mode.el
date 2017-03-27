@@ -32,7 +32,5 @@
 ; (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
 
 
-(require 'find-file-in-project)
-(global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
 
 (provide 'setup-ace-jump-mode)

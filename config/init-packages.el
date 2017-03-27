@@ -40,8 +40,12 @@
 	srefactor
 
 	ace-jump-mode
-	find-file-in-project
-	
+
+	expand-region
+	window-numbering
+	git-gutter
+	magit
+
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

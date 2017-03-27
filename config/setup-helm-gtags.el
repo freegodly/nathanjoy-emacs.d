@@ -31,8 +31,8 @@
       (define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
       (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
-      (define-key helm-gtags-mode-map (kbd "C-c ,") 'helm-gtags-previous-history)
-      (define-key helm-gtags-mode-map (kbd "C-c .") 'helm-gtags-next-history))))
+      (define-key helm-gtags-mode-map (kbd "C-c [") 'helm-gtags-previous-history)
+      (define-key helm-gtags-mode-map (kbd "C-c ]") 'helm-gtags-next-history))))
 
 (provide 'setup-helm-gtags)
 

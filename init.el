@@ -29,9 +29,8 @@
 (require 'setup-c)
 (require 'init-auto-complete)
 (require 'init-srefactor)
-
 (require 'setup-ace-jump-mode)
-
+(require 'init-git)
 
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)
