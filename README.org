@@ -1,0 +1,83 @@
+* nathanjoy emacs config
+
+** 文件夹中搜索文件
+*** find-name-dired 在文件夹中搜索文件（按名字，递归）
+*** find-grep-dired 同上（搜索文件中的内容，递归）
+*** find-dired 同上（自由度最高，所有选项自己设置，需要熟悉find）
+** 自动完成选择
+#+BEGIN_SRC lisp
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+#+END_SRC
+** ecb按键设置
+#+BEGIN_SRC list
+;;ecb
+(global-set-key [M-left] 'windmove-left)
+(global-set-key [M-right] 'windmove-right)
+(global-set-key [M-up] 'windmove-up)
+(global-set-key [M-down] 'windmove-down)
+;;;;
+(define-key global-map [(control f1)] 'ecb-hide-ecb-windows)
+(define-key global-map [(control f2)] 'ecb-show-ecb-windows)
+;; ;;;;
+(global-set-key (kbd "C-c 1") 'ecb-maximize-window-directories)
+(global-set-key (kbd "C-c 2") 'ecb-maximize-window-sources)
+(global-set-key (kbd "C-c 3") 'ecb-maximize-window-methods)
+(global-set-key (kbd "C-c 4") 'ecb-maximize-window-history)
+;; ;;;;
+(global-set-key (kbd "C-c 0") 'ecb-restore-default-window-sizes)
+#+END_SRC
+** git按键设置
+#+BEGIN_SRC lisp
+(global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
+(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+;; Stage current hunk
+(global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
+;; Revert current hunk
+(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
+#+END_SRC
+** 项目按键设置
+; Key Binding	Command	Description
+; C-c p h	helm-projectile	Helm interface to projectile
+; C-c p p	helm-projectile-switch-project	Switches to another projectile project
+; C-c p f	helm-projectile-find-file	Lists all files in a project
+; C-c p F	helm-projectile-find-file-in-known-projects	Find file in all known projects
+; C-c p g	helm-projectile-find-file-dwim	Find file based on context at point
+; C-c p d	helm-projectile-find-dir	Lists available directories in current project
+; C-c p e	helm-projectile-recentf	Lists recently opened files in current project
+; C-c p a	helm-projectile-find-other-file	Switch between files with same name but different extensions
+; C-c p i	projectile-invalidate-cache	Invalidate cache
+; C-c p z	projectile-cache-current-file	Add the file of current selected buffer to cache
+; C-c p b	helm-projectile-switch-to-buffer	List all open buffers in current project
+; C-c p s g	helm-projectile-grep	Searches for symbol starting from project root
+; C-c p s a	helm-projectile-ack	Same as above but using ack
+; C-c p s s	helm-projectile-ag	Same as above but using ag
+** 重构代码
+#+BEGIN_SRC lisp
+(global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
+(global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
+(global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
+(global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+#+END_SRC
+** 代码跳转
+#+BEGIN_SRC lisp
+(local-set-key "\C-c\C-j" 'semantic-ia-fast-jump)
+(local-set-key "\C-c\C-s" 'semantic-ia-show-summary)
+#+END_SRC
+** 文本编辑
+#+BEGIN_SRC lisp
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
+("C-;" . iedit-mode)
+(global-set-key (kbd "M-o") 'prelude-smart-open-line)
+(global-set-key (kbd "M-o") 'open-line)
+#+END_SRC
+** tag跳转
+#+BEGIN_SRC lisp
+(define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
+(define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
+(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+(define-key helm-gtags-mode-map (kbd "C-c \[") 'helm-gtags-previous-history)
+(define-key helm-gtags-mode-map (kbd "C-c \]") 'helm-gtags-next-history)
+#+END_SRC

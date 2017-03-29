@@ -73,8 +73,8 @@
 	;; autocomplete.  In my case, I want AutoComplete to use 
 	;; semantic and yasnippet (order matters, if reversed snippets
 	;; will appear before semantic tag completions).
-
-	(setq ac-sources '(ac-source-semantic ac-source-yasnippet))
+    (add-to-list 'ac-sources '(ac-source-semantic ac-source-yasnippet))
+	;; (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
 
 )
 
