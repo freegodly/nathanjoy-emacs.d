@@ -31,6 +31,7 @@
 (require 'init-srefactor)
 (require 'setup-ace-jump-mode)
 (require 'init-git)
+(require 'setup-org-model)
 
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)

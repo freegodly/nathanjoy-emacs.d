@@ -2,9 +2,12 @@ auto-save-list
 recentf
 semanticdb
 abbrev_defs
+*.dat
 ac-comphist.dat
 ede-projects.el
 projectile.cache
 projectile-bookmarks.eld
 srecode-map.el
 *~
+/elpa/archives/
+/elpa/gnupg/
