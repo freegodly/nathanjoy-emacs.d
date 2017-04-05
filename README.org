@@ -1,6 +1,6 @@
 * nathanjoy emacs config
 
-** 文件夹中搜索文件
+** 文件夹中搜索文件 
 *** find-name-dired 在文件夹中搜索文件（按名字，递归）
 *** find-grep-dired 同上（搜索文件中的内容，递归）
 *** find-dired 同上（自由度最高，所有选项自己设置，需要熟悉find）

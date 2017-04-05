@@ -1,5 +1,4 @@
 
-
 ;; 一打开就起用 text 模式。 
 (setq default-major-mode 'text-mode)
 
@@ -29,8 +28,6 @@
 ;;²»×Ô¶¯Ìí¼Ó»»ÐÐµ½ÎÄ¼þÄ©Î²
 (setq require-final-newline nil)
 
-;; ÉèÖÃ org-agenda ´ò¿ª¿ì½Ý¼ü
-(global-set-key (kbd "C-c a") 'org-agenda)
 
 ;;×Ô¶¯¼ÓÔØÍâ²¿ÐÞ¸ÄµÄÎÄ¼þ
 (global-auto-revert-mode t)
@@ -46,16 +43,8 @@
 ;; 默认显示 80列就换行 
 (setq default-fill-column 80) 
 
-
-;; ÉèÖÃÄ¬ÈÏ Org Agenda ÎÄ¼þÄ¿Â¼
-(setq org-agenda-files '("~/.emacs.d/org"))
-
-
-
-;;ÉèÖÃorgÎÄ¼þ´úÂë²¿·ÖÓï·¨¸ßÁÁ
-(require 'org)
-(setq org-src-fontify-natively t)
-
+;;disable loading vc plugins, it will obviously slow down emacs booting
+(setq vc-handled-backends nil)
 
 ;Ê¹ÓÃÏÂÃæµÄÅäÖÃÀ´¼ÓÈë×î½ü´ò¿ª¹ýÎÄ¼þµÄÑ¡ÏîÈÃÎÒÃÇ¸ü¿ì½ÝµÄÔÚÍ¼ÐÎ½çÃæµÄ²Ëµ¥ÖÐ´ò¿ª×î½ü ±à¼­¹ýµÄÎÄ¼þ
 (require 'recentf)

@@ -8,8 +8,23 @@
 (global-auto-complete-mode t)
 
 
-;; 输入2个字符才开始补全
-(setq ac-auto-start 2)
+
+(setq ac-auto-show-menu t
+      ac-quick-help-prefer-pos-tip t
+      ;; fix issue https://github.com/m2ym/auto-complete/issues/127
+      ;; if ac-auto-start is set to t, it will take long time to response while
+      ;; inserting ' / ; / <space> before a string under lisp interaction mode
+      ;; so set it to 2 instead (according to the author's comment)
+      ac-auto-start 2 ;t
+      ac-dwim t
+      ;ac-candidate-limit ac-menu-height
+      ac-use-quick-help t
+      ac-quick-help-delay 0.5
+      ac-fuzzy-enable t
+      ;; ac-disable-faces nil
+      ac-ignore-case 'smart)
+
+(setq ac-use-menu-map t)
 
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
@@ -82,6 +97,20 @@
 
 
 
+
+;; (setq-default ac-sources
+;;               '(ac-source-yasnippet
+;;                 ac-source-dictionary
+;;                 ac-source-abbrev
+;;                 ac-source-features
+;;                 ac-source-functions
+;;                 ac-source-symbols
+;;                 ac-source-variables
+;;                 ;; ac-source-words-in-buffer
+;;                 ac-source-words-in-same-mode-buffers
+;;                 ac-source-imenu
+;;                 ac-source-files-in-current-dir
+;;                 ac-source-filename))
 
 
 ; (add-hook 'c-mode-common-hook '(lambda ()

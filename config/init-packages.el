@@ -45,7 +45,12 @@
 	window-numbering
 	git-gutter
 	magit
-
+    org-page
+	htmlize
+    highlight-symbol
+    autopair
+    markdown-mode
+    smartparens
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

@@ -12,7 +12,10 @@
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-
+;(global-set-key (kbd "C-x /") 'ace-jump-mode)
+;(global-set-key (kbd "C-c C-f") 'ace-jump-char-mode)
+;(global-set-key (kbd "C-c C-w") 'ace-jump-word-mode)
+;(global-set-key (kbd "C-c C-l") 'ace-jump-line-mode)
 
 ;; 
 ;; enable a more powerful jump back function from ace jump mode

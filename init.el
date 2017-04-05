@@ -6,23 +6,29 @@
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/config" )
+(add-to-list 'load-path "~/.emacs.d/util")
 (setq custom-file (expand-file-name "config/custom.el" user-emacs-directory))
 
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
-
 (require 'init-packages)
-(require 'init-ui)
 (require 'init-better-defaults)
+(require 'init-misc)
+(require 'init-ui)
 (require 'init-keybindings)
+(require 'init-undo-tree)
+;(require 'init-autopair)
+(require 'init-highlight-symbol)
+(require 'init-markdown)
+(require 'init-smartparens)
 (require 'init-ecb)
 (require 'setup-general)
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
-  	(require 'setup-helm)
-  	(require 'setup-helm-gtags))
+    (require 'setup-helm)
+    (require 'setup-helm-gtags))
 ;;(require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
@@ -32,6 +38,7 @@
 (require 'setup-ace-jump-mode)
 (require 'init-git)
 (require 'setup-org-model)
+
 
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)
