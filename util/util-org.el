@@ -29,6 +29,7 @@ on org-insert-export-options-template, but modified several fields."
            nil ;org-export-with-section-numbers
            nil ;org-export-with-toc
            org-export-preserve-breaks
+           "xxxx"
            ;;org-export-html-expand
            org-export-with-fixed-width
            org-export-with-tables
@@ -37,6 +38,20 @@ on org-insert-export-options-template, but modified several fields."
            org-export-with-footnotes
            org-export-with-emphasize
            org-export-with-timestamps)))
+
+
+
+
+(defun nj/org-insert-export-options-template ()
+  "Insert a template with information for exporting into current buffer. Based
+on org-insert-export-options-template, but modified several fields."
+  (interactive)
+  (if (not (bolp)) (newline))
+  (insert
+           "#+SETUPFILE: theme-bigblow-local.setup
+            "
+    ))
+
 
 
 (provide 'util-org)

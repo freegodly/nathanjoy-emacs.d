@@ -11,3 +11,7 @@ srecode-map.el
 *~
 /elpa/archives/
 /elpa/gnupg/
+org/*.org
+org/*.html
+org/*.pdf
+org/images/

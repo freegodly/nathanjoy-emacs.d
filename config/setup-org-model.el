@@ -2,18 +2,6 @@
 (require 'org-download)
 (setq-default org-download-image-dir "~/.emacs.d/org/images")
 
-(require 'org)
-
-;; 在org-mode里面看到语法高亮的效果
-(setq org-src-fontify-natively t)
-
-;; 生成目录表
-(setq org-export-with-toc t)
-
-;; 禁用下划线转义
-(setq-default org-use-sub-superscripts nil)
-(setq-default org-export-with-sub-superscripts nil)
-
 
 ;; 在 Org-mode 中你可以直接开启新的缓冲区（Buffer）直接用相应的 Major Mode 来编辑代 码块内的内容。在代码块中使用 C-c ' 会直接打开对应模式的缓冲区（不仅限于 Lisp）。 这样就使在 Org-mode 中编辑代码变的十分方便快捷。
 
@@ -38,13 +26,6 @@
 
 (require 'util-org)
 
-(kh/add-hook 'org-mode-hook
-             '((lambda ()
-                 (org-defkey org-mode-map "\C-ct" 'kh/org-insert-export-options-template))
-               (lambda ()
-                 (setq truncate-lines nil))))
-
-
 
 (require 'org-page)
 (setq op/repository-directory "~/.emacs.d/org")
@@ -54,11 +35,13 @@
 (setq op/personal-duoshuo-shortname "nathanjoy")
 ;;; the configuration below are optional
 (setq op/personal-google-analytics-id "your_google_analytics_id")
-;;(op/do-publication nil "HEAD^1" "~/.emacs.d/org/publish" nil)
+;(op/do-publication nil "HEAD^1" "~/.emacs.d/org/publish" nil)
 
 (setq op/site-main-title "NathanJoy Note")
 (setq op/site-sub-title "==============> 重剑无锋，大巧不工。")
 (setq op/personal-github-link "https://github.com/freegodly")
+
+
 
 
 (setq op/category-config-alist
@@ -91,5 +74,42 @@
          :sort-by :date
          :category-index nil)))
 
+
+
+(kh/add-hook 'org-mode-hook
+             '((lambda ()
+                (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
+                (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
+                (set-face-attribute 'org-level-3 nil :height 1.2 :bold t)
+                (org-defkey org-mode-map "\C-ct" 'nj/org-insert-export-options-template))
+               (lambda ()
+                 (setq truncate-lines nil))))
+
+
+(defun org-mode-my-init ()
+    ; 不关闭中文输入法，输入章节标题里面的星号
+    (define-key org-mode-map (kbd "×") (kbd "*"))
+    (define-key org-mode-map (kbd "－") (kbd "-"))
+
+    (setq org-todo-keywords
+          '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
+
+    ;; 在org-mode里面看到语法高亮的效果
+    (setq org-src-fontify-natively t)
+
+    ;; 生成目录表
+    (setq org-export-with-toc t)
+
+    ;; 禁用下划线转义
+    (setq-default org-use-sub-superscripts nil)
+    (setq-default org-export-with-sub-superscripts nil)
+
+    
+)
+
+(add-hook 'org-mode-hook 'org-mode-my-init)
+
+(require 'uimage)
+(add-hook 'org-mode-hook 'uimage-mode)
 
 (provide 'setup-org-model)

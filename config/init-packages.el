@@ -51,6 +51,7 @@
     autopair
     markdown-mode
     smartparens
+    uimage 
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

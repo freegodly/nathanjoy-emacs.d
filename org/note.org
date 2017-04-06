@@ -1,25 +1,30 @@
-* Ñ§Ï°emacs
-** »ù´¡²Ù×÷
--- C-f ÎªÇ°ÒÆÒ»¸ö×Ö·û£¬f´ú±íforward¡£
--- C-b ÎªºóÒÆÒ»¸ö×Ö·û£¬b´ú±íbackward¡£
--- C-p ÎªÉÏÒÆÖÁÇ°Ò»ĞĞ£¬p´ú±íprevious¡£
--- C-n ÎªÉÏÒÆÖÁÏÂÒ»ĞĞ£¬n´ú±ínext¡£
--- C-a ÎªÒÆÖÁĞĞÊ×£¬a´ú±íahead¡£
--- C-e ÎªÒÆÖÁĞĞÎ²£¬e´ú±íend¡£
 
-** ¸ß¼¶×Ô¶¨Òå
+#+SETUPFILE: theme-bigblow-local.setup
+
+
+* å­¦ä¹ emacs
+** CANCEL åŸºç¡€æ“ä½œ
+   - State "CANCEL"     from "TODO"       [2017-04-06 å‘¨å›› 22:51]
+-- C-f ä¸ºå‰ç§»ä¸€ä¸ªå­—ç¬¦ï¼Œfä»£è¡¨forwardã€‚
+-- C-b ä¸ºåç§»ä¸€ä¸ªå­—ç¬¦ï¼Œbä»£è¡¨backwardã€‚
+-- C-p ä¸ºä¸Šç§»è‡³å‰ä¸€è¡Œï¼Œpä»£è¡¨previousã€‚
+-- C-n ä¸ºä¸Šç§»è‡³ä¸‹ä¸€è¡Œï¼Œnä»£è¡¨nextã€‚
+-- C-a ä¸ºç§»è‡³è¡Œé¦–ï¼Œaä»£è¡¨aheadã€‚
+-- C-e ä¸ºç§»è‡³è¡Œå°¾ï¼Œeä»£è¡¨endã€‚
+
+** é«˜çº§è‡ªå®šä¹‰
 use C-c ' to open anther buffer to edit source code.
 <s table auto show BEG...
 #+BEGIN_SRC emacs-lisp
-  ;;ÉèÖÃorgÎÄ¼ş´úÂë²¿·ÖÓï·¨¸ßÁÁ
+  ;;è®¾ç½®orgæ–‡ä»¶ä»£ç éƒ¨åˆ†è¯­æ³•é«˜äº®
   (require 'org)
   (set org-src-fontify-natively t)
 #+END_SRC
-¿ªÆôÈ«ÆÁ
+å¼€å¯å…¨å±
 #+BEGIN_SRC emacs-lisp
   (setq initial-frame-alist (quote ((fullscren . maximized))))
 #+END_SRC
-ÅäÖÃ²å¼şÔ´
+é…ç½®æ’ä»¶æº
 #+BEGIN_SRC emacs-lisp
 (when (>= emacs-major-version 24)
     (require 'package)
@@ -67,21 +72,22 @@ use C-c ' to open anther buffer to edit source code.
   (exec-path-from-shell-initialize))
 #+END_SRC
 
-ÅäÖÃpackage
+é…ç½®package
 M-x customize-group
 
-** Org-mode ½ø½×
-Agenda µÄÊ¹ÓÃ
-C-c C-s Ñ¡ÔñÏëÒªÍê³ÉµÄÊ±¼ä
-C-c C-d Ñ¡ÔñÏëÒª½áÊøµÄÊ±¼ä
-C-c a ¿ÉÒÔ´ò¿ª Agenda Ä£Ê½²Ëµ¥²¢Ñ¡Ôñ²»Í¬µÄ¿ÉÊÓ·½Ê½£¨ r £©
+** Org-mode è¿›é˜¶
+Agenda çš„ä½¿ç”¨
+C-c C-s é€‰æ‹©æƒ³è¦å®Œæˆçš„æ—¶é—´
+C-c C-d é€‰æ‹©æƒ³è¦ç»“æŸçš„æ—¶é—´
+C-c a å¯ä»¥æ‰“å¼€ Agenda æ¨¡å¼èœå•å¹¶é€‰æ‹©ä¸åŒçš„å¯è§†æ–¹å¼ï¼ˆ r ï¼‰
 #+BEGIN_SRC emacs-lisp
-;; ÉèÖÃÄ¬ÈÏ Org Agenda ÎÄ¼şÄ¿Â¼
+;; è®¾ç½®é»˜è®¤ Org Agenda æ–‡ä»¶ç›®å½•
 (setq org-agenda-files '("~/org"))
 
-;; ÉèÖÃ org-agenda ´ò¿ª¿ì½İ¼ü
+;; è®¾ç½® org-agenda æ‰“å¼€å¿«æ·é”®
 (global-set-key (kbd "C-c a") 'org-agenda)
 #+END_SRC
 
-** learn emacs DEADLINE: <2016-11-27 ÖÜÈÕ> SCHEDULED: <2016-11-26 ÖÜÁù 00:00>
+** learn emacs DEADLINE: <2016-11-27 å‘¨æ—¥> SCHEDULED: <2016-11-26 å‘¨å…­ 00:00>
+[[http://static.oschina.net/uploads/img/201604/27163339_KiQ0.jpg]]
    
