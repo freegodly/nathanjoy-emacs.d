@@ -4,6 +4,42 @@
 *** find-name-dired 在文件夹中搜索文件（按名字，递归）
 *** find-grep-dired 同上（搜索文件中的内容，递归）
 *** find-dired 同上（自由度最高，所有选项自己设置，需要熟悉find）
+** Helm
+*** helm find files 
+- C-x C-f        相当与locate命令,输入某个模糊文件名查找出所有匹配结果
+- C-s               相当于grep命令, 可以选择某个文件,然后输入要查询字段,显示和grep这个文件相同,可以M-a选择所有文件,从所有文件中查询
+- M-R              重命名选定文件
+- M-C              copy选定文件
+- M-S               为选定文件建立软链接
+- M-H               为选定文件建立硬链接
+- M-D               删除某个文件
+- C-<backspace>     取消/开启自动补全文件名功能
+- C-l                  退到上级目录
+- C-x @            用root打开某个文件
+- <right>           手动补全文件名
+
+** CUA的矩形块操作 
+- C-x r k 剪切一个矩形块
+- C-x r y 粘贴一个矩形块
+- C-x r o 插入一个矩形块
+- C-x r c 清除一个矩形块(使其变成空白)
+- C-x r t 在选定区域的所有列前插入样的字符
+- [M-a]: 将rect中的文字左对齐
+- [M-b]: 用空格(tabs或者spaces)替换所有rect中的字符
+- [M-c]: 去掉所有行左侧的空格
+- [M-f]: 用单个字符替换所有rect中的字符(提示输入一个字符)
+- [M-i]: 对每行中第一个找到的数字进行加1操作(自动把0x开头的当作十六进制数字)
+- [M-k]: 剪切rect
+- [M-l]: 把rect中的内容全部转换为小写
+- [M-m]: 拷贝rect
+- [M-n]: 用一串自增的数字替换rect中的每一行(这个功能可以用来给每行编号)
+- [M-o]: rect的内容右移，选中的rect用空格填充
+- [M-r]: 用字符串替换符满足正则表达式的字符串
+- [M-R]: 上下反转
+- [M-s]: 把rect中的每一行替换为一个字符串(提示输入)
+- [M-t]: 把rect整个替换为一个字符串(提示输入)
+- [M-u]: 把rect中的内容全部转换为大写
+- [M-|]: 对rect执行一个shell命令
 ** 自动完成选择
 #+BEGIN_SRC lisp
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
@@ -11,47 +47,47 @@
 #+END_SRC
 ** ecb按键设置
 #+BEGIN_SRC list
-;;ecb
+  ecb
 (global-set-key [M-left] 'windmove-left)
 (global-set-key [M-right] 'windmove-right)
 (global-set-key [M-up] 'windmove-up)
 (global-set-key [M-down] 'windmove-down)
-;;;;
+    
 (define-key global-map [(control f1)] 'ecb-hide-ecb-windows)
 (define-key global-map [(control f2)] 'ecb-show-ecb-windows)
-;; ;;;;
+       
 (global-set-key (kbd "C-c 1") 'ecb-maximize-window-directories)
 (global-set-key (kbd "C-c 2") 'ecb-maximize-window-sources)
 (global-set-key (kbd "C-c 3") 'ecb-maximize-window-methods)
 (global-set-key (kbd "C-c 4") 'ecb-maximize-window-history)
-;; ;;;;
+       
 (global-set-key (kbd "C-c 0") 'ecb-restore-default-window-sizes)
 #+END_SRC
 ** git按键设置
 #+BEGIN_SRC lisp
 (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
 (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
-;; Stage current hunk
+   Stage current hunk
 (global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
-;; Revert current hunk
+   Revert current hunk
 (global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
 #+END_SRC
 ** 项目按键设置
-; Key Binding	Command	Description
-; C-c p h	helm-projectile	Helm interface to projectile
-; C-c p p	helm-projectile-switch-project	Switches to another projectile project
-; C-c p f	helm-projectile-find-file	Lists all files in a project
-; C-c p F	helm-projectile-find-file-in-known-projects	Find file in all known projects
-; C-c p g	helm-projectile-find-file-dwim	Find file based on context at point
-; C-c p d	helm-projectile-find-dir	Lists available directories in current project
-; C-c p e	helm-projectile-recentf	Lists recently opened files in current project
-; C-c p a	helm-projectile-find-other-file	Switch between files with same name but different extensions
-; C-c p i	projectile-invalidate-cache	Invalidate cache
-; C-c p z	projectile-cache-current-file	Add the file of current selected buffer to cache
-; C-c p b	helm-projectile-switch-to-buffer	List all open buffers in current project
-; C-c p s g	helm-projectile-grep	Searches for symbol starting from project root
-; C-c p s a	helm-projectile-ack	Same as above but using ack
-; C-c p s s	helm-projectile-ag	Same as above but using ag
+-   Key Binding	Command	Description
+-   C-c p h	helm-projectile	Helm interface to projectile
+-   C-c p p	helm-projectile-switch-project	Switches to another projectile project
+-   C-c p f	helm-projectile-find-file	Lists all files in a project
+-   C-c p F	helm-projectile-find-file-in-known-projects	Find file in all known projects
+-   C-c p g	helm-projectile-find-file-dwim	Find file based on context at point
+-   C-c p d	helm-projectile-find-dir	Lists available directories in current project
+-   C-c p e	helm-projectile-recentf	Lists recently opened files in current project
+-   C-c p a	helm-projectile-find-other-file	Switch between files with same name but different extensions
+-   C-c p i	projectile-invalidate-cache	Invalidate cache
+-   C-c p z	projectile-cache-current-file	Add the file of current selected buffer to cache
+-   C-c p b	helm-projectile-switch-to-buffer	List all open buffers in current project
+-   C-c p s g	helm-projectile-grep	Searches for symbol starting from project root
+-   C-c p s a	helm-projectile-ack	Same as above but using ack
+-   C-c p s s	helm-projectile-ag	Same as above but using ag
 ** 重构代码
 #+BEGIN_SRC lisp
 (global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
@@ -68,7 +104,7 @@
 #+BEGIN_SRC lisp
 (global-set-key (kbd "M-%") 'anzu-query-replace)
 (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
-("C-;" . iedit-mode)
+("C- " . iedit-mode)
 (global-set-key (kbd "M-o") 'prelude-smart-open-line)
 (global-set-key (kbd "M-o") 'open-line)
 #+END_SRC
@@ -81,3 +117,10 @@
 (define-key helm-gtags-mode-map (kbd "C-c \[") 'helm-gtags-previous-history)
 (define-key helm-gtags-mode-map (kbd "C-c \]") 'helm-gtags-next-history)
 #+END_SRC
+** 使用书签
+| C-x r m Bookmark | bookmark-set         | 设置一个名为 Bookmark 的书签 |
+| C-x r l          | bookmarks-bmenu-list | 列出所有已保存的书签         |
+|                  | bookmark-delete      | 删除一个书签                 |
+| C-x r b          | bookmark-jump        | 跳转至                       |
+|                  | bookmark-save        | 书签保存                     |
+

@@ -16,7 +16,7 @@
 (require 'util-editing)
 
 ;;; move mouse away when cursor moves close to mouse
-(mouse-avoidance-mode 'animate)
+;;(mouse-avoidance-mode 'animate)
 
 ;;; enlarge the kill ring
 (setq kill-ring-max 100)
@@ -71,7 +71,6 @@
 (define-key (current-global-map) (kbd "C-x C-/") 'smart-toggle-comment)
 
 (global-set-key (kbd "C-x C-j") 'join-line)
-(global-set-key (kbd "C-c s") 'switch-to-scratch)
 
 
 (provide 'setup-editing)

@@ -70,6 +70,7 @@
 
     (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
 
+    
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "M-y") 'helm-show-kill-ring)
     (global-set-key (kbd "C-x b") 'helm-buffers-list)
@@ -77,17 +78,18 @@
     (global-set-key (kbd "C-c r") 'helm-recentf)
     (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
     (global-set-key (kbd "C-c h o") 'helm-occur)
-    (global-set-key (kbd "C-c h o") 'helm-occur)
 
     (global-set-key (kbd "C-c h w") 'helm-wikipedia-suggest)
     (global-set-key (kbd "C-c h g") 'helm-google-suggest)
 
     (global-set-key (kbd "C-c h x") 'helm-register)
-    ;; (global-set-key (kbd "C-x r j") 'jump-to-register)
+    ;;(global-set-key (kbd "C-x r j") 'jump-to-register)
 
     (define-key 'help-command (kbd "C-f") 'helm-apropos)
     (define-key 'help-command (kbd "r") 'helm-info-emacs)
     (define-key 'help-command (kbd "C-l") 'helm-locate-library)
+
+    (global-set-key (kbd "C-x C-f") #'helm-find-files)
 
     ;; use helm to list eshell history
     (add-hook 'eshell-mode-hook
@@ -105,12 +107,13 @@
 
     (define-key global-map [remap list-buffers] 'helm-buffers-list)
 
+   
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; PACKAGE: helm-swoop                ;;
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; Locate the helm-swoop folder to your path
     (use-package helm-swoop
-      :bind (("C-c h o" . helm-swoop)
+      :bind (("C-s" . helm-swoop)
              ("C-c s" . helm-multi-swoop-all))
       :config
       ;; When doing isearch, hand the word over to helm-swoop
@@ -133,10 +136,30 @@
 
     (helm-mode 1)
 
+
+
+    
     (use-package helm-projectile
       :init
       (helm-projectile-on)
       (setq projectile-completion-system 'helm)
       (setq projectile-indexing-method 'alien))))
+
+    (require 'helm-ls-git)
+    (global-set-key (kbd "C-<f6>") 'helm-ls-git-ls)
+    (global-set-key (kbd "C-x C-d") 'helm-browse-project)
+
+(helm-autoresize-mode 1)
+
+;; (require 'linum-relative)
+;; (linum-relative-in-helm-p)
+;; (helm-linum-relative-mode nil)
+
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (eshell-cmpl-initialize)
+            (define-key eshell-mode-map [remap eshell-pcomplete] 'helm-esh-pcomplete)
+            (define-key eshell-mode-map (kbd "M-p") 'helm-eshell-history)))
+
 
 (provide 'setup-helm)

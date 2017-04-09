@@ -16,6 +16,9 @@
 	helm-projectile
 	helm-gtags
 	helm 
+	helm-ag
+    helm-ls-git
+    helm-swoop
 	yasnippet
 	ws-butler 
 	volatile-highlights
@@ -30,10 +33,13 @@
 	company-c-headers
 	ecb
 	company
+    neotree
+    all-the-icons
 	;; --- Themes ---
 	monokai-theme
 	solarized-theme
-
+    doom-themes
+    
 	auto-complete
 	projectile 
 	stickyfunc-enhance
@@ -48,10 +54,12 @@
     org-page
 	htmlize
     highlight-symbol
-    autopair
     markdown-mode
     smartparens
     uimage 
+    google-c-style
+    linum-relative
+    highlight-parentheses
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

@@ -15,3 +15,6 @@ org/*.org
 org/*.html
 org/*.pdf
 org/images/
+bookmarks
+README.html
+eshell/
