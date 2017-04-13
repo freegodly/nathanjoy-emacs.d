@@ -59,10 +59,6 @@
                       'help-echo buffer-file-coding-system))
   "] "
 
-
-  ;; evil state
-  '(:eval (evil-generate-mode-line-tag evil-state))
-
   ;; git info
   '(vc-mode vc-mode)
 

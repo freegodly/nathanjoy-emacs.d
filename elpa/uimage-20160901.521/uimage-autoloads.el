@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "uimage" "uimage.el" (22758 51829 0 0))
+;;;### (autoloads nil "uimage" "uimage.el" (22767 41268 0 0))
 ;;; Generated autoloads from uimage.el
 
 (define-obsolete-function-alias 'turn-on-uimage-mode 'uimage-mode "24.1")

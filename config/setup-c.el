@@ -1,36 +1,14 @@
-;; company-c-headers
-(use-package company-c-headers
-  :init
-  (add-to-list 'company-backends 'company-c-headers))
-
-
-; IMPORTANT: If you want to complete C++ header files, 
-; you have to add its paths since by default company-c-headers only 
-; includes these two system include paths: /usr/include/ 
-; and /usr/local/include/. To enable C++ header completion for 
-; standard libraries, you have to add its path, for example, 
-; like this:
-; (add-to-list 'company-c-headers-path-system "/usr/include/c++/4.8/")
-
-
 
 ;; hs-minor-mode for folding source code
-(add-hook 'c-mode-common-hook 'hs-minor-mode)
-
-
-(use-package cc-mode
-  :init
-  ;;(define-key c-mode-map  [(tab)] 'company-complete)
-  ;;(define-key c++-mode-map  [(tab)] 'company-complete)
-  (define-key c++-mode-map [C-left] 'hs-hide-block)
-  (define-key c++-mode-map [C-right] 'hs-show-block)
-  )
-
+(add-hook 'c-mode-common-hook   'hs-minor-mode)
 
 (require 'google-c-style)  
 (add-hook 'c-mode-common-hook 'google-set-c-style)  
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)  
 
+(add-hook 'python-mode-hook 'flycheck-mode)
+(add-hook 'c++-mode-hook 'flycheck-mode)
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++11")))
 
 (provide 'setup-c)
 

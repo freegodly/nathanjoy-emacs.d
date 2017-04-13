@@ -48,15 +48,8 @@
   (when (fboundp 'hl-paren-color-update)
     (hl-paren-color-update)))
 
-; (defcustom hl-paren-colors
-;   '("firebrick1" "IndianRed1" "IndianRed3" "IndianRed4")
-;   "List of colors for the highlighted parentheses.
-; The list starts with the the inside parentheses and moves outwards."
-;   :type '(repeat color)
-;   :set 'hl-paren-set
-;   :group 'highlight-parentheses)
 (defcustom hl-paren-colors
-  '("red" "green1" "plum1" "IndianRed4")
+  '("firebrick1" "IndianRed1" "IndianRed3" "IndianRed4")
   "List of colors for the highlighted parentheses.
 The list starts with the the inside parentheses and moves outwards."
   :type '(repeat color)
@@ -173,12 +166,6 @@ overlays when scrolling or moving point by pressing and holding
         (hl-paren-create-overlays)
         (let ((hl-paren-last-point -1)) ;; force update
           (hl-paren-highlight))))))
-
-
-(define-globalized-minor-mode global-highlight-parentheses-mode
-  highlight-parentheses-mode
-  (lambda ()
-    (highlight-parentheses-mode t)))
 
 (provide 'highlight-parentheses)
 

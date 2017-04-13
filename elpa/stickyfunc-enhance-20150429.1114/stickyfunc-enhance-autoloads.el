@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "stickyfunc-enhance" "stickyfunc-enhance.el"
-;;;;;;  (22743 45949 0 0))
+;;;;;;  (22767 41248 0 0))
 ;;; Generated autoloads from stickyfunc-enhance.el
 
 (autoload 'semantic-stickyfunc-fetch-stickyline "stickyfunc-enhance" "\

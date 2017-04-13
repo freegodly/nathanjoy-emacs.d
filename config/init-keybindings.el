@@ -64,8 +64,8 @@
           (backward-delete-char-untabify (min tab-width (current-column))))))))
 
 
-(global-set-key (kbd "<tab>")    'abs-indent)
-(global-set-key (kbd "<S-tab>")  'abs-unindent)
+; (global-set-key (kbd "<tab>")    'abs-indent)
+; (global-set-key (kbd "<S-tab>")  'abs-unindent)
 
 
 (global-set-key (kbd "M-SPC") 'set-mark-command)
@@ -79,14 +79,32 @@
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
 
-;;
-(global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region) 
+;; 注释
+(defun my-comment-or-uncomment-region (beg end &optional arg)  
+  (interactive (if (use-region-p)  
+                   (list (region-beginning) (region-end) nil)  
+                 (list (line-beginning-position)  
+                       (line-beginning-position 2))))  
+  (comment-or-uncomment-region beg end arg)  
+)  
+(global-set-key  [?\C-c ?\C-/] 'my-comment-or-uncomment-region)  
+;;(global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region) 
 
 ;;iedit
 ;; C-; 
+(require 'iedit)
+
+(global-set-key (
+				 kbd "C-z") 'undo-tree-undo)
 
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+
+
+;; 快速切换至上个buffer
+(global-set-key (kbd "<backtab>") '(lambda ()
+									 (interactive)
+									 (switch-to-buffer (other-buffer (current-buffer) 1))))
 
 (provide 'init-keybindings)

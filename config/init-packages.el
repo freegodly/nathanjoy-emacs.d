@@ -26,32 +26,24 @@
 	undo-tree 
 	iedit 
 	dtrt-indent 
-	counsel-projectile 
 	company 
 	clean-aindent-mode 
 	anzu
 	company-c-headers
-	ecb
-	company
     neotree
     all-the-icons
 	;; --- Themes ---
 	monokai-theme
 	solarized-theme
     doom-themes
-    
-	auto-complete
-	projectile 
+
+	org-download
 	stickyfunc-enhance
-	srefactor
-
 	ace-jump-mode
-
 	expand-region
 	window-numbering
 	git-gutter
 	magit
-    org-page
 	htmlize
     highlight-symbol
     markdown-mode
@@ -60,6 +52,11 @@
     google-c-style
     linum-relative
     highlight-parentheses
+    anaconda-mode
+    company-anaconda
+	flycheck
+	auto-complete-clang
+	
 	) "Default packages")
 
 (setq package-selected-packages my/packages)
