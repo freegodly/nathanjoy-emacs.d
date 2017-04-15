@@ -4,7 +4,7 @@
 
 (global-set-key (kbd "<f10>") 'loop-alpha)
 ;当前窗口和非当前窗口时透明度
-(setq alpha-list '((96 70) (100 100)))
+(setq alpha-list '((100 70) (100 100)))
 (defun loop-alpha ()
 (interactive)
 (let ((h (car alpha-list)))
@@ -18,34 +18,13 @@
 
 
 
-
 (require 'doom-themes)
 (load-theme 'doom-molokai t)
+;; (load-theme 'doom-molokai t)
+;; (load-theme 'dracula t)
 ;;(load-theme 'monokai t)
-;;(load-theme 'solarized t)
 
-; ;;; Settings (defaults)
-; (setq doom-enable-bold t    ; if nil, bolding are universally disabled
-;       doom-enable-italic t  ; if nil, italics are universally disabled
 
-;       ;; doom-one specific settings
-;       doom-one-brighter-modeline nil
-;       doom-one-brighter-comments nil
-;       )
-
-; ;;; OPTIONAL
-; ;; brighter source buffers (that represent files)
-; (add-hook 'find-file-hook 'doom-buffer-mode-maybe)
-; ;; if you use auto-revert-mode
-; (add-hook 'after-revert-hook 'doom-buffer-mode-maybe)
-; ;; you can brighten other buffers (unconditionally) with:
-; (add-hook 'ediff-prepare-buffer-hook 'doom-buffer-mode)
-
-; ;; brighter minibuffer when active
-; (add-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
-
-; ;; Enable nlinum line highlighting
-; (require 'doom-nlinum)     ; requires nlinum and hl-line-mode
 
 (setq org-fontify-whole-heading-line t
       org-fontify-done-headline t
@@ -53,7 +32,11 @@
 
 
 
-(set-default-font "13")
+(set-default-font "14")
+(dolist (charset '(kana han cjk-misc bopomofo))
+(set-fontset-font (frame-parameter nil 'font) charset
+                  (font-spec :family "Microsoft YaHei Mono" :size 20)))
+
 
 
 ;;设置窗口位置为屏库左上角(0,0)

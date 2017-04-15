@@ -36,7 +36,8 @@
 	monokai-theme
 	solarized-theme
     doom-themes
-
+	dracula-theme
+	
 	org-download
 	stickyfunc-enhance
 	ace-jump-mode
@@ -55,8 +56,9 @@
     anaconda-mode
     company-anaconda
 	flycheck
-	auto-complete-clang
-	
+	company-c-headers
+	company-irony
+	ox-ioslide
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

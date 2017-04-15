@@ -1,5 +1,5 @@
 (require 'org-download)
-(setq-default org-download-image-dir "~/.emacs.d/org/images")
+(setq-default org-download-image-dir "~/.emacs.d/org/imgs")
 (require 'ob-latex)
 
 ;; 在 Org-mode 中你可以直接开启新的缓冲区（Buffer）直接用相应的 Major Mode 来编辑代 码块内的内容。在代码块中使用 C-c ' 会直接打开对应模式的缓冲区（不仅限于 Lisp）。 这样就使在 Org-mode 中编辑代码变的十分方便快捷。
@@ -30,19 +30,8 @@ on org-insert-export-options-template, but modified several fields."
   (interactive)
   (if (not (bolp)) (newline))
   (insert
-           "#+SETUPFILE: theme-bigblow-local.setup
-            "
-    ))
-
-
-(add-hook 'org-mode-hook
-             '((lambda ()
-                 (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
-                 (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
-                 (set-face-attribute 'org-level-3 nil :height 1.2 :bold t)
-                 (org-defkey org-mode-map "\C-ct" 'nj/org-insert-export-options-template))
-               (lambda ()
-                 (setq truncate-lines nil))))
+   "#+SETUPFILE: theme-bigblow-local.setup"
+   ))
 
 
 (setq org-todo-keywords
@@ -60,14 +49,20 @@ on org-insert-export-options-template, but modified several fields."
 
 
 (defun org-mode-my-init ()
-                                        ; 不关闭中文输入法，输入章节标题里面的星号
+  ;; 不关闭中文输入法，输入章节标题里面的星号
   (define-key org-mode-map (kbd "×") (kbd "*"))
   (define-key org-mode-map (kbd "－") (kbd "-"))
+  (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
+  (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
+  (set-face-attribute 'org-level-3 nil :height 1.2 :bold t)
+  (org-defkey org-mode-map "\C-ct" 'nj/org-insert-export-options-template)
+  (setq truncate-lines nil)
   )
 
 (add-hook 'org-mode-hook 'org-mode-my-init)
 
 (require 'uimage)
 (add-hook 'org-mode-hook 'uimage-mode)
+
 
 (provide 'setup-org-model)

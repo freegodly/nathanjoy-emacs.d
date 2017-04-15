@@ -65,7 +65,7 @@ use C-c ' to open anther buffer to edit source code.
     (package-refresh-contents)
     (dolist (pkg my/packages)
       (when (not (package-installed-p pkg))
-	(package-install pkg))))
+    (package-install pkg))))
 
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))

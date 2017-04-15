@@ -5,6 +5,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;;垃圾回收的频率500M
+(setq gc-cons-threshold (* 500 1024 1024))
+
 (add-to-list 'load-path "~/.emacs.d/config" )
 (setq custom-file (expand-file-name "config/custom.el" user-emacs-directory))
 
@@ -13,8 +16,8 @@
   (find-file "~/.emacs.d/init.el"))
 
 (require 'init-packages)
-(require 'init-better-defaults)
 (require 'init-ui)
+(require 'init-better-defaults)
 (require 'init-mode-line)
 (require 'init-keybindings)
 (require 'init-undo-tree)
@@ -30,7 +33,7 @@
 (require 'setup-ace-jump-mode)
 (require 'init-git)
 (require 'setup-org-model)
-
+(require 'init-ext)
 
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)
