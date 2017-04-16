@@ -99,6 +99,9 @@
 (require 'highlight-parentheses)
 (global-highlight-parentheses-mode t)
 
+
+(require 'vlf-setup)
+
 (provide 'init-better-defaults)
 
 

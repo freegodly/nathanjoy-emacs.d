@@ -59,6 +59,7 @@
 	company-c-headers
 	company-irony
 	ox-ioslide
+	vlf
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

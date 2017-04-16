@@ -1,5 +1,6 @@
-(require 'yasnippet)
+(require 'company-words-discn)
 
+(require 'yasnippet)
 (setq yas-snippet-dirs
       '("~/.emacs.d/elpa/yasnippet-20170322.1829/snippets"                   ;; he default collection
 										; "/path/to/some/collection/"           ;; foo-mode and bar-mode snippet collection
@@ -33,7 +34,6 @@
 	  company-tooltip-margin 1
       company-transformers '(company-sort-by-backend-importance company-sort-by-occurrence)
       company-continue-commands '(not helm-dabbrev))
-
 
 
 (setq company-backends (delete 'company-semantic company-backends))

@@ -8,6 +8,7 @@
 ;;垃圾回收的频率500M
 (setq gc-cons-threshold (* 500 1024 1024))
 
+(add-to-list 'load-path "~/.emacs.d/lelpa" )
 (add-to-list 'load-path "~/.emacs.d/config" )
 (setq custom-file (expand-file-name "config/custom.el" user-emacs-directory))
 
@@ -34,6 +35,6 @@
 (require 'init-git)
 (require 'setup-org-model)
 (require 'init-ext)
-
+(require 'init-aspell)
 (load-file custom-file)
 (put 'upcase-region 'disabled nil)

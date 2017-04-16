@@ -107,7 +107,7 @@
 
     (define-key global-map [remap list-buffers] 'helm-buffers-list)
 
-   
+	
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; PACKAGE: helm-swoop                ;;
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -141,13 +141,16 @@
     
     (use-package helm-projectile
       :init
-      (helm-projectile-on)
+	  (projectile-global-mode t)
+      (setq projectile-indexing-method 'alien)
       (setq projectile-completion-system 'helm)
-      (setq projectile-indexing-method 'alien))))
+	  (helm-projectile-on)
+     
+	 )))
 
-    (require 'helm-ls-git)
-    (global-set-key (kbd "C-<f6>") 'helm-ls-git-ls)
-    (global-set-key (kbd "C-x C-d") 'helm-browse-project)
+(require 'helm-ls-git)
+(global-set-key (kbd "C-<f6>") 'helm-ls-git-ls)
+(global-set-key (kbd "C-x C-d") 'helm-browse-project)
 
 (helm-autoresize-mode 1)
 

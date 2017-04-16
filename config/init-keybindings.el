@@ -90,6 +90,8 @@
   ) 
 (global-set-key [?\C-c ?\C-/] 'my-comment-or-uncomment-region) 
 
+(require 'neotree)
+(global-set-key  [(control f1)] 'neotree-toggle)
 
 ;;iedit
 ;; C-; 
