@@ -25,8 +25,6 @@ same directory as the org-buffer and insert a link to this file."
       (insert (concat "[[file:" filename "]]")))
   (org-display-inline-images)
   )
-
-(global-set-key (kbd "C-c p s") 'my-org-screenshot)
-
+(global-set-key (kbd "C-c o p") 'my-org-screenshot)
 
 (provide 'init-ext)

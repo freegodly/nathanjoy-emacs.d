@@ -1,3 +1,4 @@
+# coding=utf-8
 # 保存剪切板图片到文件
 # need install  pillow for python
 # creator： Nathan Joy

@@ -38,7 +38,6 @@
                   (font-spec :family "Microsoft YaHei Mono" :size 20)))
 
 
-
 ;;设置窗口位置为屏库左上角(0,0)
 (set-frame-position (selected-frame) 100 40)
 ;;设置emacs启动窗口大小
