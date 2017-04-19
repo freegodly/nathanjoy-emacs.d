@@ -102,6 +102,12 @@
 
 (require 'vlf-setup)
 
+
+(when (fboundp 'winner-mode)
+ (winner-mode)
+ (windmove-default-keybindings))
+
+
 (provide 'init-better-defaults)
 
 

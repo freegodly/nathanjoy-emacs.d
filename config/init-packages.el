@@ -56,10 +56,18 @@
     anaconda-mode
     company-anaconda
 	flycheck
+	flyspell
+	flymake
 	company-c-headers
 	company-irony
 	ox-ioslide
 	vlf
+	web-mode
+	windresize
+	winner
+	imenu
+	imenu-list
+	multiple-cursors
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

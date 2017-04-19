@@ -4,7 +4,7 @@
 (setq window-numbering-assign-func
       (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
 
-
+(require 'iedit)
 ;; for tab key
 ;;*** simple indent/unindent just like other editors
 ;; unlike emacs' default settings, this would not use syntax-based indent, but:
@@ -18,7 +18,7 @@
 ;;    * if cursor lies in line leading, always unindent tab-width 
 ;;    * otherwise, the cursor would move backwards (tab-width)
 ;; Note: this implementation would hornor `tab-always-indent', `indent-tabs-mode' and `tab-with'.
-(defun abs-indent (arg)
+(defun abs-indent (arg)					;
   "Absolutely indent current line or region. Mimic other editors' indent."
   (interactive "P")
   (let ( (width (or arg tab-width)) )
@@ -124,5 +124,16 @@
 	(define-key hs-minor-mode-map [(meta left)] 'hs-hide-block)
   )
 (add-hook 'hs-minor-mode-hook 'hs-minor-mode-keys)
+
+
+(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
 
 (provide 'init-keybindings)
