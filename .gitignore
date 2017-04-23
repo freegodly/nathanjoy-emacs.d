@@ -21,3 +21,5 @@ eshell/
 anaconda-mode/
 org/imgs/
 .*
+*#*#
+tramp

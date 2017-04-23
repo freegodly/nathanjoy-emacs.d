@@ -68,6 +68,7 @@
 	imenu
 	imenu-list
 	multiple-cursors
+	e2wm
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

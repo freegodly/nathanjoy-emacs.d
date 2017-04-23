@@ -107,6 +107,8 @@
  (winner-mode)
  (windmove-default-keybindings))
 
+(require 'tramp)
+(set-default 'tramp-default-method "plink")
 
 (provide 'init-better-defaults)
 

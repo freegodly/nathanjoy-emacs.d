@@ -135,5 +135,7 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 
+(require 'e2wm)
+(global-set-key (kbd "M-+") 'e2wm:start-management)
 
 (provide 'init-keybindings)

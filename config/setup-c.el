@@ -1,6 +1,6 @@
 
-
-(require 'google-c-style)  
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(require 'google-c-style) 
 (add-hook 'c-mode-common-hook 'google-set-c-style)  
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)  
 
