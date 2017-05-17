@@ -1,10 +1,10 @@
 ;;; org-download-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "org-download" "org-download.el" (22767 41329
-;;;;;;  0 0))
+;;;### (autoloads nil "org-download" "org-download.el" (22812 11652
+;;;;;;  789733 886000))
 ;;; Generated autoloads from org-download.el
 
 (autoload 'org-download-enable "org-download" "\

@@ -1,16 +1,15 @@
 ;;; window-numbering-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "window-numbering" "window-numbering.el" (22767
-;;;;;;  41252 0 0))
+;;;### (autoloads nil "window-numbering" "window-numbering.el" (22812
+;;;;;;  11654 253726 27000))
 ;;; Generated autoloads from window-numbering.el
 
 (defvar window-numbering-mode nil "\
 Non-nil if Window-Numbering mode is enabled.
-See the `window-numbering-mode' command
-for a description of this minor mode.
+See the command `window-numbering-mode' for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `window-numbering-mode'.")

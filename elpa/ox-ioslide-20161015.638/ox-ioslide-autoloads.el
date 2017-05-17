@@ -1,10 +1,10 @@
 ;;; ox-ioslide-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "ox-ioslide" "ox-ioslide.el" (22770 9509 0
-;;;;;;  0))
+;;;### (autoloads nil "ox-ioslide" "ox-ioslide.el" (22812 11726 1347
+;;;;;;  340000))
 ;;; Generated autoloads from ox-ioslide.el
 
 (autoload 'org-ioslide-export-as-html "ox-ioslide" "\
@@ -24,7 +24,7 @@ Export current buffer to a Google ioslide HTML5 slide HTML file.
 ;;;***
 
 ;;;### (autoloads nil nil ("ox-ioslide-helper.el" "ox-ioslide-pkg.el")
-;;;;;;  (22770 9509 0 0))
+;;;;;;  (22812 11726 28404 863000))
 
 ;;;***
 

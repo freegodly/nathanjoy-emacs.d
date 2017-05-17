@@ -1,9 +1,10 @@
 ;;; window-layout-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("window-layout.el") (22780 51299 0 0))
+;;;### (autoloads nil nil ("window-layout.el") (22812 11731 244814
+;;;;;;  285000))
 
 ;;;***
 

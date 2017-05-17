@@ -1,16 +1,15 @@
 ;;; clean-aindent-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "clean-aindent-mode" "clean-aindent-mode.el"
-;;;;;;  (22767 41240 0 0))
+;;;;;;  (22812 11636 813820 39000))
 ;;; Generated autoloads from clean-aindent-mode.el
 
 (defvar clean-aindent-mode nil "\
 Non-nil if Clean-Aindent mode is enabled.
-See the `clean-aindent-mode' command
-for a description of this minor mode.
+See the command `clean-aindent-mode' for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `clean-aindent-mode'.")

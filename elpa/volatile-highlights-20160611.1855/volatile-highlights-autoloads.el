@@ -1,16 +1,15 @@
 ;;; volatile-highlights-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "volatile-highlights" "volatile-highlights.el"
-;;;;;;  (22767 41232 0 0))
+;;;;;;  (22812 11631 453849 107000))
 ;;; Generated autoloads from volatile-highlights.el
 
 (defvar volatile-highlights-mode nil "\
 Non-nil if Volatile-Highlights mode is enabled.
-See the `volatile-highlights-mode' command
-for a description of this minor mode.
+See the command `volatile-highlights-mode' for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `volatile-highlights-mode'.")

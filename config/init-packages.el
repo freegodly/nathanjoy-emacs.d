@@ -55,7 +55,7 @@
     highlight-parentheses
     anaconda-mode
     company-anaconda
-	flycheck
+	
 	flyspell
 	flymake
 	company-c-headers
@@ -69,8 +69,7 @@
 	imenu-list
 	multiple-cursors
 	e2wm
-
-	slime
+    slime
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

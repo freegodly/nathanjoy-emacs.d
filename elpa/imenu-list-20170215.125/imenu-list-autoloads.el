@@ -1,10 +1,10 @@
 ;;; imenu-list-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "imenu-list" "imenu-list.el" (22775 27087 0
-;;;;;;  0))
+;;;### (autoloads nil "imenu-list" "imenu-list.el" (22812 11730 245325
+;;;;;;  301000))
 ;;; Generated autoloads from imenu-list.el
 
 (autoload 'imenu-list-noselect "imenu-list" "\
@@ -21,8 +21,7 @@ If the imenu-list buffer doesn't exist, create it.
 
 (defvar imenu-list-minor-mode nil "\
 Non-nil if Imenu-List minor mode is enabled.
-See the `imenu-list-minor-mode' command
-for a description of this minor mode.
+See the command `imenu-list-minor-mode' for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `imenu-list-minor-mode'.")

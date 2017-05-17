@@ -1,10 +1,10 @@
 ;;; linum-relative-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "linum-relative" "linum-relative.el" (22767
-;;;;;;  41269 0 0))
+;;;### (autoloads nil "linum-relative" "linum-relative.el" (22812
+;;;;;;  11664 537670 979000))
 ;;; Generated autoloads from linum-relative.el
 
 (autoload 'linum-relative-toggle "linum-relative" "\
@@ -19,8 +19,7 @@ Display relative line numbers for current buffer.
 
 (defvar linum-relative-global-mode nil "\
 Non-nil if Linum-Relative-Global mode is enabled.
-See the `linum-relative-global-mode' command
-for a description of this minor mode.
+See the command `linum-relative-global-mode' for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `linum-relative-global-mode'.")

@@ -1,10 +1,10 @@
 ;;; windresize-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "windresize" "windresize.el" (22775 26235 0
-;;;;;;  0))
+;;;### (autoloads nil "windresize" "windresize.el" (22812 11729 969326
+;;;;;;  732000))
 ;;; Generated autoloads from windresize.el
 
 (autoload 'windresize "windresize" "\

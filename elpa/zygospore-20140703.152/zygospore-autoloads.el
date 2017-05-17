@@ -1,9 +1,10 @@
 ;;; zygospore-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "zygospore" "zygospore.el" (22767 41213 0 0))
+;;;### (autoloads nil "zygospore" "zygospore.el" (22812 11608 937972
+;;;;;;  161000))
 ;;; Generated autoloads from zygospore.el
 
 (autoload 'zygospore-toggle-delete-other-windows "zygospore" "\

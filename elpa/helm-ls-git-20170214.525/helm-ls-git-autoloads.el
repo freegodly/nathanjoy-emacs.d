@@ -1,10 +1,10 @@
 ;;; helm-ls-git-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "helm-ls-git" "helm-ls-git.el" (22767 41230
-;;;;;;  0 0))
+;;;### (autoloads nil "helm-ls-git" "helm-ls-git.el" (22812 11619
+;;;;;;  909912 2000))
 ;;; Generated autoloads from helm-ls-git.el
 
 (eieio-defclass-autoload 'helm-ls-git-source '(helm-source-in-buffer) "helm-ls-git" nil)

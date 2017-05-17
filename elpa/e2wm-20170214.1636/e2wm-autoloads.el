@@ -1,9 +1,9 @@
 ;;; e2wm-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "e2wm" "e2wm.el" (22780 51300 0 0))
+;;;### (autoloads nil "e2wm" "e2wm.el" (22812 11731 749317 499000))
 ;;; Generated autoloads from e2wm.el
 
 (autoload 'e2wm:start-management "e2wm" "\
@@ -21,7 +21,8 @@ would be called at `e2wm:pst-change'. Then, NOT-PST-CHANGE is not
 
 ;;;***
 
-;;;### (autoloads nil "e2wm-vcs" "e2wm-vcs.el" (22780 51300 0 0))
+;;;### (autoloads nil "e2wm-vcs" "e2wm-vcs.el" (22812 11731 745317
+;;;;;;  519000))
 ;;; Generated autoloads from e2wm-vcs.el
 
 (autoload 'e2wm:dp-magit "e2wm-vcs" "\
@@ -41,7 +42,7 @@ would be called at `e2wm:pst-change'. Then, NOT-PST-CHANGE is not
 
 ;;;***
 
-;;;### (autoloads nil nil ("e2wm-pkg.el") (22780 51300 0 0))
+;;;### (autoloads nil nil ("e2wm-pkg.el") (22812 11731 758796 616000))
 
 ;;;***
 

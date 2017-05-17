@@ -1,9 +1,10 @@
 ;;; pythonic-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "pythonic" "pythonic.el" (22767 41272 0 0))
+;;;### (autoloads nil "pythonic" "pythonic.el" (22812 11665 505665
+;;;;;;  811000))
 ;;; Generated autoloads from pythonic.el
 
 (autoload 'pythonic-activate "pythonic" "\

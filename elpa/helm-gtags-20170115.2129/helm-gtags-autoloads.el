@@ -1,10 +1,10 @@
 ;;; helm-gtags-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "helm-gtags" "helm-gtags.el" (22767 41229 0
-;;;;;;  0))
+;;;### (autoloads nil "helm-gtags" "helm-gtags.el" (22812 11618 713918
+;;;;;;  542000))
 ;;; Generated autoloads from helm-gtags.el
 
 (autoload 'helm-gtags-clear-all-cache "helm-gtags" "\
