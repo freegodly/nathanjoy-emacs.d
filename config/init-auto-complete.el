@@ -45,9 +45,9 @@
 									  '(
 										(
 										 company-irony
-										 company-c-headers
+										 ;;company-c-headers
 										 ;;company-clang
-										 company-dabbrev-code
+										 ;;company-dabbrev-code
 										 company-yasnippet
 										 company-gtags)
 										company-files
@@ -67,7 +67,7 @@
 									  '(
 										(
 										 ;;company-anaconda
-										 company-dabbrev-code
+										 ;;company-dabbrev-code
 										 company-yasnippet
 										 company-gtags)
 										company-files

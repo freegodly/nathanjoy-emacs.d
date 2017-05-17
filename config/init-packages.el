@@ -69,6 +69,8 @@
 	imenu-list
 	multiple-cursors
 	e2wm
+
+	slime
 	) "Default packages")
 
 (setq package-selected-packages my/packages)

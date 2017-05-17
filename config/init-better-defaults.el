@@ -110,6 +110,11 @@
 (require 'tramp)
 (set-default 'tramp-default-method "plink")
 
+
+(setq inferior-lisp-program "sbcl") ;;指明用的Lisp的可执行文件
+(require 'slime) 
+(slime-setup '(slime-fancy)) ;;如果不加'(slime-fancy)，slime的所有加载信息都会显示出来
+
 (provide 'init-better-defaults)
 
 
